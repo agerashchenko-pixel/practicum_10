@@ -1,7 +1,12 @@
 def count_vowels_and_consonants(text):
+    """
+    Count the number of Russian vowels and consonants in the given text.
+    :param text: the input string to analyze
+    :return: None
+    """
     vowels_chars = "аеёиоуыэюя"
     consonants_chars = "бвгджзйклмнпрстфхцчшщ"
-    
+
     vowels_count = 0
     consonants_count = 0
 
@@ -12,3 +17,7 @@ def count_vowels_and_consonants(text):
             consonants_count += 1
 
     print(vowels_count, consonants_count)
+
+
+text = input()
+count_vowels_and_consonants(text)
