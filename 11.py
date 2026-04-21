@@ -1,4 +1,9 @@
 def print_simple_numbers(N):
+    """
+    Find and print all prime numbers from 1 to N.
+    :param N: the upper limit for checking primes
+    :return: None
+    """
     for num in range(1, N + 1):
         if num < 2:
             continue
