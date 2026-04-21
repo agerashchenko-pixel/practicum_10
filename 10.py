@@ -1,4 +1,10 @@
 def print_filtered_numbers(a, b):
+    """
+    Check numbers in range and print those consisting only of 1, 3, 4, 8, 9.
+    :param a: start of the range
+    :param b: end of the range
+    :return: None
+    """
     if a > b:
         a, b = b, a
 
@@ -17,6 +23,6 @@ def print_filtered_numbers(a, b):
             print(num)
 
 
-a = int(input("Введите число A: "))
-b = int(input("Введите число B: "))
+a = int(input())
+b = int(input())
 print_filtered_numbers(a, b)
