@@ -1,4 +1,11 @@
 def calculate_price(price, card, day):
+    """
+    Calculate the final price with cumulative discounts and print it.
+    :param price: initial cost
+    :param card: 'yes' if customer has a card, otherwise 'no'
+    :param day: 'holiday' if it is a holiday, otherwise 'workday'
+    :return: None
+    """
     discount = 0
 
     if 15000 > price >= 5000:
@@ -20,7 +27,6 @@ def calculate_price(price, card, day):
         discount = 15
 
     final_price = price * (1 - (discount / 100))
-
     print(final_price)
 
 
