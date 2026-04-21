@@ -1,4 +1,9 @@
 def print_fibonacci(N):
+    """
+    Print the first N numbers of the Fibonacci sequence.
+    :param N: count of numbers to print
+    :return: None
+    """
     last_num = 1
     bl_num = 1
 
