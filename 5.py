@@ -1,36 +1,29 @@
-def calculate_price(price, card, day):
+def calculate_card_bonus(amount):
     """
-    Calculate the final price with cumulative discounts and print it.
-    :param price: initial cost
-    :param card: 'yes' if customer has a card, otherwise 'no'
-    :param day: 'holiday' if it is a holiday, otherwise 'workday'
-    :return: None
+    Calculate the total monetary value of a phone card including bonuses.
+    :param amount: the cost of the card ($5, $10, $25, $50, $100)
+    :return: total value with bonus or None if the amount is invalid
     """
-    discount = 0
-
-    if 15000 > price >= 5000:
-        discount = 3
-    elif 20000 > price >= 15000:
-        discount = 5
-    elif 30000 > price >= 20000:
-        discount = 7
-    elif price > 30000:
-        discount = 10
-
-    if card == 'yes':
-        discount += 5
-
-    if day == 'holiday':
-        discount += 3
-
-    if discount > 15:
-        discount = 15
-
-    final_price = price * (1 - (discount / 100))
-    print(final_price)
+    if amount == 5 or amount == 10:
+        total = amount
+        return total
+    elif amount == 25:
+        total = amount + 3
+        return total
+    elif amount == 50:
+        total = amount + 8
+        return total
+    elif amount == 100:
+        total = amount + 20
+        return total
+    else:
+        return None
 
 
-price = float(input())
-card = input()
-day = input()
-calculate_price(price, card, day)
+amount_input = int(input())
+result = calculate_card_bonus(amount_input)
+
+if result is not None:
+    print(result)
+else:
+    print("Недопустимое значение")
