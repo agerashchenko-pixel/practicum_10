@@ -1,10 +1,15 @@
 import turtle
 
+
 turtle.speed(5)
 turtle.width(2)
 
 
 def draw_square():
+    """
+    Draw a square filled with crimson color.
+    :return: None
+    """
     turtle.color("crimson")
     turtle.begin_fill()
     for _ in range(4):
@@ -14,6 +19,10 @@ def draw_square():
 
 
 def draw_circle():
+    """
+    Draw a circle filled with royalblue color.
+    :return: None
+    """
     turtle.color("royalblue")
     turtle.begin_fill()
     turtle.circle(20)
@@ -21,6 +30,10 @@ def draw_circle():
 
 
 def draw_triangle():
+    """
+    Draw an equilateral triangle filled with gold color.
+    :return: None
+    """
     turtle.color("gold")
     turtle.begin_fill()
     for _ in range(3):
